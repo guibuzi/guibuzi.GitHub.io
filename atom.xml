@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://guibuzi.github.io</id>
-    <title>Guibuzi</title>
-    <updated>2021-03-30T15:00:30.833Z</updated>
+    <title>路过人间的探索</title>
+    <updated>2021-03-30T15:12:20.359Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://guibuzi.github.io"/>
     <link rel="self" href="https://guibuzi.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://guibuzi.github.io/images/avatar.png</logo>
     <icon>https://guibuzi.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Guibuzi</rights>
+    <rights>All rights reserved 2021, 路过人间的探索</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://guibuzi.github.io/post/hello-gridea/</id>
