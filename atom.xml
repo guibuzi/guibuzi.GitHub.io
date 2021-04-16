@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://guibuzi.github.io</id>
     <title>路过人间的探索</title>
-    <updated>2021-04-16T14:32:37.143Z</updated>
+    <updated>2021-04-16T14:41:26.569Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://guibuzi.github.io"/>
     <link rel="self" href="https://guibuzi.github.io/atom.xml"/>
@@ -16,7 +16,22 @@
         <link href="https://guibuzi.github.io/post/shu-chu-chong-ding-xiang/">
         </link>
         <updated>2021-04-16T14:28:26.000Z</updated>
-        <content type="html"><![CDATA[<p>[toc]</p>
+        <content type="html"><![CDATA[<p><ul class="markdownIt-TOC">
+<li><a href="#%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91">输出重定向</a>
+<ul>
+<li><a href="#%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6">文件描述符</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91-2">输出重定向</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E9%87%8D%E5%AE%9A%E5%90%91">输入重定向</a></li>
+<li><a href="#%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95">高级方法</a>
+<ul>
+<li><a href="#%E6%AD%A3%E7%A1%AE%E8%BE%93%E5%87%BA%E5%92%8C%E9%94%99%E8%AF%AF%E8%BE%93%E5%87%BA%E5%90%8C%E6%97%B6%E4%BF%9D%E5%AD%98">正确输出和错误输出同时保存</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E4%B8%A2%E5%BC%83">输出丢弃</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
 <h1 id="输出重定向">输出重定向</h1>
 <h2 id="文件描述符">文件描述符</h2>
 <table>
