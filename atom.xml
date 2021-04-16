@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://guibuzi.github.io</id>
     <title>路过人间的探索</title>
-    <updated>2021-04-16T14:27:02.224Z</updated>
+    <updated>2021-04-16T14:29:48.886Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://guibuzi.github.io"/>
     <link rel="self" href="https://guibuzi.github.io/atom.xml"/>
@@ -10,6 +10,104 @@
     <logo>https://guibuzi.github.io/images/avatar.png</logo>
     <icon>https://guibuzi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 路过人间的探索</rights>
+    <entry>
+        <title type="html"><![CDATA[输出重定向]]></title>
+        <id>https://guibuzi.github.io/post/shu-chu-chong-ding-xiang/</id>
+        <link href="https://guibuzi.github.io/post/shu-chu-chong-ding-xiang/">
+        </link>
+        <updated>2021-04-16T14:28:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>[toc]</p>
+<h1 id="输出重定向">输出重定向</h1>
+<h2 id="文件描述符">文件描述符</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>文件描述符</th>
+<th>默认情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准输入</td>
+<td>0</td>
+<td>从键盘获得</td>
+</tr>
+<tr>
+<td>标准输出</td>
+<td>1</td>
+<td>输出到屏幕</td>
+</tr>
+<tr>
+<td>错误输出</td>
+<td>2</td>
+<td>输出到屏幕</td>
+</tr>
+</tbody>
+</table>
+<h2 id="输出重定向-2">输出重定向</h2>
+]]></summary>
+        <content type="html"><![CDATA[<p>[toc]</p>
+<h1 id="输出重定向">输出重定向</h1>
+<h2 id="文件描述符">文件描述符</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>文件描述符</th>
+<th>默认情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准输入</td>
+<td>0</td>
+<td>从键盘获得</td>
+</tr>
+<tr>
+<td>标准输出</td>
+<td>1</td>
+<td>输出到屏幕</td>
+</tr>
+<tr>
+<td>错误输出</td>
+<td>2</td>
+<td>输出到屏幕</td>
+</tr>
+</tbody>
+</table>
+<h2 id="输出重定向-2">输出重定向</h2>
+<!-- more -->
+<pre><code class="language-shell">command &gt; file  # 把标准输出重定向到新文件中
+command 1&gt; file  # 同上
+command &gt;&gt; file # 把标准输出追加到文件中
+command 1&gt;&gt; file # 同上
+command 2&gt; file # 把标准错误重定向到新文件中
+command 2&gt;&gt; file # 把标准错误追加到新文件
+</code></pre>
+<h2 id="输入重定向">输入重定向</h2>
+<pre><code class="language-shell">command &lt; file # 以file文件为标准输入
+command 0&lt; file # 同上
+command &lt;&lt; delimiter # 从标准输入中读入，直到遇到delimiter分隔符
+</code></pre>
+<h2 id="高级方法">高级方法</h2>
+<h3 id="正确输出和错误输出同时保存">正确输出和错误输出同时保存</h3>
+<pre><code class="language-shell"># 使用 &amp; 可以将两个输出绑定在一起
+command &gt; file 2&gt;&amp;1 # 以覆盖方式将正确输出和错误输出同时保存在同一个文件
+command &gt;&gt; file 2&gt;&amp;1 # 以追加方式将正确输出和错误输出同时保存在同一个文件
+command &amp;&gt; file # 以覆盖方式将正确输出和错误输出都保存在同一个文件当中
+command &amp;&gt;&gt; file # 以追加方式将正确输出和错误输出同时保存在同一个文件
+command &gt;&gt; file1 2&gt;&gt; file2 # 以追加方式分别将正确输出和错误输出保存在file1和file2中
+</code></pre>
+<h3 id="输出丢弃">输出丢弃</h3>
+<pre><code class="language-shell">command 2&gt; /dev/null # 将错误输出丢弃
+
+# tricks
+command &gt; /dev/null 2&gt;&amp;1 # 丢弃标准输出和错误输出
+command 2&gt;&amp;1 &gt; /dev/null # 标准输出丢弃 错误输出至屏幕 
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://guibuzi.github.io/post/hello-gridea/</id>

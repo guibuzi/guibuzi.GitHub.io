@@ -1,11 +1,10 @@
 <html>
-
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>友情链接 - 路过人间的探索</title>
+<title>输出重定向 | 路过人间的探索</title>
 
 <link rel="shortcut icon" href="https://guibuzi.github.io/favicon.ico?v=1618583380594">
 
@@ -26,12 +25,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
-
 <body>
 <div class="main gt-bg-theme-color-first">
-        <div class="main-content">
-            <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -95,28 +93,103 @@
     </div>
 </nav>
 
-            <div class="post-container">
-                <div class="post-detail">
-                    <article>
-                        <!-- <div class="post-content-wrapper"> -->
-                            <div class="post-content">
-                                <div class="friends-desc">
-                                    
-                                </div>
-                                <h3 id="linklist">友链列表</h3>
-                                
-                                    暂无友链，快来申请吧！
-                                
-                            </div>
-                        <!-- </div> -->
-                    </article>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    输出重定向
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-04-16 ·
+                    </time>
+                    
+                        <a href="https://guibuzi.github.io/tag/lC90C-HWs/" class="post-tags">
+                            # Linux
+                        </a>
+                    
                 </div>
-                
+                <div class="post-content">
+                    <p>[toc]</p>
+<h1 id="输出重定向">输出重定向</h1>
+<h2 id="文件描述符">文件描述符</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>文件描述符</th>
+<th>默认情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准输入</td>
+<td>0</td>
+<td>从键盘获得</td>
+</tr>
+<tr>
+<td>标准输出</td>
+<td>1</td>
+<td>输出到屏幕</td>
+</tr>
+<tr>
+<td>错误输出</td>
+<td>2</td>
+<td>输出到屏幕</td>
+</tr>
+</tbody>
+</table>
+<h2 id="输出重定向-2">输出重定向</h2>
+<!-- more -->
+<pre><code class="language-shell">command &gt; file  # 把标准输出重定向到新文件中
+command 1&gt; file  # 同上
+command &gt;&gt; file # 把标准输出追加到文件中
+command 1&gt;&gt; file # 同上
+command 2&gt; file # 把标准错误重定向到新文件中
+command 2&gt;&gt; file # 把标准错误追加到新文件
+</code></pre>
+<h2 id="输入重定向">输入重定向</h2>
+<pre><code class="language-shell">command &lt; file # 以file文件为标准输入
+command 0&lt; file # 同上
+command &lt;&lt; delimiter # 从标准输入中读入，直到遇到delimiter分隔符
+</code></pre>
+<h2 id="高级方法">高级方法</h2>
+<h3 id="正确输出和错误输出同时保存">正确输出和错误输出同时保存</h3>
+<pre><code class="language-shell"># 使用 &amp; 可以将两个输出绑定在一起
+command &gt; file 2&gt;&amp;1 # 以覆盖方式将正确输出和错误输出同时保存在同一个文件
+command &gt;&gt; file 2&gt;&amp;1 # 以追加方式将正确输出和错误输出同时保存在同一个文件
+command &amp;&gt; file # 以覆盖方式将正确输出和错误输出都保存在同一个文件当中
+command &amp;&gt;&gt; file # 以追加方式将正确输出和错误输出同时保存在同一个文件
+command &gt;&gt; file1 2&gt;&gt; file2 # 以追加方式分别将正确输出和错误输出保存在file1和file2中
+</code></pre>
+<h3 id="输出丢弃">输出丢弃</h3>
+<pre><code class="language-shell">command 2&gt; /dev/null # 将错误输出丢弃
+
+# tricks
+command &gt; /dev/null 2&gt;&amp;1 # 丢弃标准输出和错误输出
+command 2&gt;&amp;1 &gt; /dev/null # 标准输出丢弃 错误输出至屏幕 
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://guibuzi.github.io/post/hello-gridea/" class="post-title gt-a-link">
+                    Hello Gridea
+                </a>
             </div>
+        
 
+        
 
+        
 
-            <div class="site-footer gt-c-content-color-first">
+        
+
+        <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>
     <div class="social-container">
         
@@ -146,8 +219,7 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-        </div>
     </div>
+</div>
 </body>
-
 </html>
